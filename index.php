@@ -1,3 +1,6 @@
+<?php
+// Inclua qualquer configuração de conexão com banco de dados ou outras configurações aqui, se necessário
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
