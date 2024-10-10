@@ -37,7 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Agora, você também insere o `full_name`
     $stmt = $pdo->prepare("INSERT INTO users (username, password_hash, email, full_name) VALUES (?, ?, ?, ?)");
     if ($stmt->execute([$username, $passwordHash, $email, $full_name])) {
-        echo "Cadastro realizado com sucesso!";
+        // Redirecionar para a página de login
+        header("Location: login.php");
+        exit();
     } else {
         // Exibir mensagem de erro detalhada
         $errorInfo = $stmt->errorInfo();
