@@ -36,8 +36,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = rand(0, 36); // Simulação do resultado da roleta
 
         // Lógica para aumentar ou diminuir o saldo
-        if ($result === /* condição de vitória */) {
-            $new_balance = $user['balance'] + $bet; // Exemplo de condição de vitória
+        if ($result === 7) { // Exemplo de condição de vitória (número 7)
+            $new_balance = $user['balance'] + $bet;
         } else {
             $new_balance = $user['balance'] - $bet;
         }
